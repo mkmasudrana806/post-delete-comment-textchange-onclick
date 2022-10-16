@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete</title>
+    <style>
+        p{
+            display: inline;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- <h1 id="secret-info">My secret info</h1>
+    <input placeholder="type delete" type="text" name="" id="input-text">
+    <button id="btn-delete" disabled>Delete</button> -->
+   <section id="cousrses">
+    <div class="course">
+        <p class="course-name">Data Structure And Algorithm</p>
+        <button class="btn-delete">Delete</button>
+      </div>
+      <div class="course">
+        <p class="course-name">c programming</p>
+        <button class="btn-delete">Delete</button>
+      </div>
+      <div class="course">
+        <p class="course-name">java programming</p>
+        <button class="btn-delete">Delete</button>
+      </div>
+   </section>
+   
+    <script>
+        document.getElementById('cousrses').addEventListener('click', function(event){
+            const target = event.target;
+            console.log(target);
+            const parent = event.target.parentElement;
+            console.log(parent);
+            const targetValue = target.innerText;
+            if(targetValue==='Delete'){
+            parent.style.display='none';
+            }
+          
+        })
+
+    //   document
+    //     .getElementById("btn-delete")
+    //     .addEventListener("click", function () {
+    //       const course = document.getElementById("course");
+    //       course.style.display = "none";
+    //     });
+      // document.getElementById('input-text').addEventListener('keyup', function(event){
+      //     const text = document.getElementById('input-text').value;
+      //     const btnDelete = document.getElementById('btn-delete');
+      //     if(text==='delete'){
+      //      btnDelete.removeAttribute('disabled');
+      //     }
+      //     else
+      //     {
+      //         btnDelete.setAttribute('disabled', true);
+      //     }
+      // })
+      // document.getElementById('btn-delete').addEventListener('click', function(){
+      //     const secretInfo = document.getElementById('secret-info');
+      //     const inputElement = document.getElementById('input-text').value;
+      //   secretInfo.style.display = 'none';
+      // })
+    </script>
+  </body>
+</html>

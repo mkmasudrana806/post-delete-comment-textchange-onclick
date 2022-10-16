@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Summary</title>
+</head>
+<body>
+    <h1>Final DOM Event Handlers</h1>
+    <h3 id="move">This text is moved</h3>
+    <h3 id="handlers-status">Default Text</h3>
+    <button onclick="handleClick();">Handle Event By Add Onclick 
+        Function</button>
+        <br>
+        <br>
+        <input type="text" name="" id="input-text">
+        <br>
+        <br>
+        <button id="update">update</button>
+        <p>to change Default text pres the update button</p>
+
+
+    <script>
+        function handleClick(){
+            const handlerStatus = document.getElementById('handlers-status');
+            const setText = document.getElementById('move').innerText;
+            console.log(setText);
+            handlerStatus.innerText = setText;
+            document.getElementById('move').innerText = '';
+        }
+
+
+        document.getElementById('update').addEventListener('click', function(){
+       const inputText = document.getElementById('input-text');
+       const inputValue = inputText.value;
+       inputText.value = '';
+       const toChanged = document.getElementById('handlers-status').innerText=inputValue;
+
+        })
+
+    </script>
+</body>
+</html>
